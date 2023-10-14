@@ -19,6 +19,13 @@ export default {
     setTimeout(() => {
       this.nome = "Fábio Teixeira";
     }, 3000);
+
+    this.lifeCycle();
   },
+  methods: {
+    lifeCycle() {
+      console.log('Executou');
+    }
+  }
 };
 </script>
