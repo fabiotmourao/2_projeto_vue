@@ -1,11 +1,17 @@
-<template>
+<template >
     <p v-if="estado_trabalhando">Estou trabalhando no momento.</p>
     <p v-else>Estou em busca de novas oportunidade!</p>
-    <p>Utilizo as seguintes tecnlogias:</p>
+    <p>Utilizo as seguintes tecnlogias back-end:</p>
     <ul>
-        <li>PHP / Laravel</li>
-        <li>Mysql</li>
-        <li>Iniciando com vueJS</li>
+        <li v-for="(technology, index)  in backend_technologies" :key="index">
+            {{ technology }}
+        </li>
+    </ul>
+        <p>Utilizo as seguintes tecnlogias front-end:</p>
+    <ul>
+        <li v-for="(technology)  in frontend_technologies" :key="technology.id">
+            {{ technology.language }}
+        </li>
     </ul>
     <div>
         <button @click="showEmail">
@@ -13,7 +19,7 @@
         </button>
     </div>
     <p v-show="exibir">Mande uma mensagem para: {{ email}}</p>
-    <p> Para acessar meu portifólio <a v-bind:href="link" target="_blank" >Clique aqui</a></p>
+    <p class="teste"> Para acessar meu portifólio <a v-bind:href="link" target="_blank" >Clique aqui</a></p>
     <Picture />
 </template>
 
@@ -31,7 +37,13 @@ export default {
             exibir: false,
             email: 'fabio@email.com',
             link: 'https://google.com',
-            textButton: 'Exibir E-mail'
+            textButton: 'Exibir E-mail',
+            backend_technologies:['PHP/Laravel','Mysql','JavaScript'],
+            frontend_technologies: [
+                {id: 1, language: 'HTML5'},
+                {id: 2, language: 'CSS3'},
+                {id: 3, language: 'Vue 3'}
+            ]
         }
     },
     methods:{
@@ -46,3 +58,16 @@ export default {
     }
 }
 </script>
+
+<style>
+    p {
+       padding: 1rem;
+    }
+    ul {
+        list-style: none;
+        padding-top: rem;
+    }
+    li {
+        margin: 1rem;
+    }
+</style>
