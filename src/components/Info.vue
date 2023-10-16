@@ -63,11 +63,30 @@ export default {
     p {
        padding: 1rem;
     }
+
     ul {
         list-style: none;
-        padding-top: rem;
+        padding-top: 1rem;
     }
+    
     li {
         margin: 1rem;
+    }
+
+    button{
+        height: 56px;
+        border: 0;
+        background: #04D361;  
+        border-radius: 8px;
+
+        font-family: 'Archivo';
+        
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 26px;
+
+        color: #FFFFFF;   
+        padding: 1rem;
+        margin: 0 0 .5rem 1.6rem; 
     }
 </style>
