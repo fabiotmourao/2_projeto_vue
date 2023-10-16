@@ -76,7 +76,7 @@ export default {
     button{
         height: 56px;
         border: 0;
-        background: #04D361;  
+        background: #40e0d0;  
         border-radius: 8px;
 
         font-family: 'Archivo';

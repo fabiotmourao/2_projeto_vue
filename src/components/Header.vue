@@ -36,6 +36,6 @@ a {
 }
 
 a:hover {
-  color: turquoise;
+  color: #40e0d0;
 }
 </style>
