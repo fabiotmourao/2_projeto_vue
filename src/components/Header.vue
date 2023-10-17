@@ -4,6 +4,7 @@
       <li><a href="#">Home</a></li>
       <li><a href="#">Projetos</a></li>
       <li><a href="#">Contatos</a></li>
+      <li v-if="exibir"><a href="#">Meu Perfil</a></li>
     </ul>
   </div>
 </template>
@@ -11,6 +12,9 @@
 <script>
 export default {
   name: "Header",
+  props:[
+    "exibir",
+  ]
 };
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <Header />
+  <Header :exibir="true"/>
   <FirstComponent />
   <LifeCycle />
   <Pessoa />
